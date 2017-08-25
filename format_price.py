@@ -1,12 +1,9 @@
 import sys
 
-
 def format_price(price):
 
-    price = str(round(float(price), 2))
-    integer_part, fractional_part = price.split('.')
-    integer_part = '{0:,}'.format(int(integer_part)).replace(',', ' ')
-    pretty_price = integer_part+'.'+fractional_part
+    price = round(float(price), 2)
+    pretty_price = '{0:,.2f}'.format(price).replace(',', ' ')
     return pretty_price
 
 if __name__ == '__main__':
