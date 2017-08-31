@@ -8,7 +8,7 @@ Run in CLI mode
 $ python format_price.py 1999.999
 > 2 000.00
 ```
-or use it as a external module
+or use it as an external module
 ```
 from format_price import format_price
 ```
@@ -23,6 +23,8 @@ Use tests.py for unit testing with these cases.
 00.00
 000.1000
 .777
+-10
+abc
 
 # Project Goals
 

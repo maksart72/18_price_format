@@ -39,6 +39,14 @@ class TestFormat_price(TestCase):
             price = format_price(.777)
             self.assertEqual(price, '0.78')
 
+    def test10(self):
+        price = format_price(-10)
+        self.assertEqual(price, None)
+
+    def test11(self):
+        price = format_price('abc')
+        self.assertEqual(price, None)
+
 
 if __name__ == '__main__':
     unittest.main()

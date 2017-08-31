@@ -1,6 +1,13 @@
 import sys
 
 def format_price(price):
+    try:
+        price = float(price)
+    except (ValueError, TypeError):
+        return None
+
+    if price < 0:
+        return None
 
     price = round(float(price), 2)
     pretty_price = '{0:,.2f}'.format(price).replace(',', ' ')
